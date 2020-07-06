@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <header>
+    <title>example6 JavaScript</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>    
+    <script src="myscript.js"></script>
+    <script>
+      function set_maika() {
+        document.getElementById("bob").innerhtml = "maika is the best grill (javascript)";
+      }
+    </script>
+  </header>
+  <!-- order of tags has impact on display element-->
+  <body>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h1>learning javascript</h1>
+        <!-- id==bob wouldn't display maika is the best grill if the javascript line was before-->
+        <p id="bob">place holder</p>
+        <p id="bob2">place holder</p>
+        <p id="demo" style="color: blueviolet;">click the buttons</p>
+        <button type="button" onclick="document.getElementById('demo').innerHTML = 'Maika'">Maika</button>
+        <button type="button" onclick="document.getElementById('demo').innerHTML = 'Hibiki'">Hibiki</button>
+        <button type="button" onclick="document.getElementById('demo').innerHTML = 'Kanna'">Kanna</button>
+        <br>
+        <button type="button" onclick='pop_up()'>externaljs</button>
+        <br>
+        <hr>
+        <p id="animu" style="color: burlywood;">place holder id=animu</p>
+        <button type="button" onclick="document.getElementById('frame').src = 'gallery_example_folder/animu_pic/kanna01.jpg';
+        document.getElementById('animu').innerHTML = 'kanna';">kanna</button>
+        <button type="button" onclick="document.getElementById('frame').src = 'gallery_example_folder/animu_pic/amatsun01.jpg';
+        document.getElementById('animu').innerHTML = 'amatsun';">amatsun</button>
+        <br>
+        <button type="button" onclick="document.getElementById('frame').style.display = 'block'">show</button>
+        <button type="button" onclick="document.getElementById('frame').style.display = 'none'">hide</button>
+        <br>
+        <img id="frame" class="img-rounded" src="gallery_example_folder/animu_pic/kanna01.jpg" width="60%">
+      </div>
+      <div class="col">
+        <h3><b>column 2</b></h3>
+        <p id="56">id=56</p>
+        <p id="console">check console for best girl</p>
+        <script>
+          document.write("document.write()") 
+        </script>
+        <button type="button" onclick="document.write('ploop!')" style="color: crimson;">delete all</button>
+        <br>
+        <button type="button" onclick="alert('scam is not cool')">caution</button>
+        <button type="button" onclick="window.print()">print this page</button>
+        <br>
+        <button type="button" onclick="document.getelementbyid('random').innerhtml = random_number()">generate</button>
+        <p id="random">random 1 - 10</p>
+      </div>
+    </div>
+  </div>
+  </body>
+  <!-- placing javascript on bottom is also a good idea
+  it improves download speed according to w3school-->
+  <script>
+    // stackoverflow very cool implementation
+    // first, checks if it isn't implemented yet.
+    if (!String.prototype.format) {
+      String.prototype.format = function() {
+        var args = arguments;
+        return this.replace(/{(\d+)}/g, function(match, number) { 
+          return typeof args[number] != 'undefined'
+            ? args[number]
+            : match
+          ;
+        });
+      };
+    }
+    // I make a function in JavaScript!
+    set_maika();
+    set_maika2();
+    document.getElementById("56").innerHTML = 5 + 6;
+    console.log("fun fact: Maika is best grill")
+    var name = "Hibiki"
+    var rate = "SS+" 
+    console.log(name,"is", rate, "for me!")
+    console.log("{0} is {1} tier!".format(name, rate))
+    console.log(typeof(rate))
+    console.log(document.getElementById("console").innerHTML)
+  </script>
+</html>

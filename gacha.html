@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>       
+        <title>Gacha</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+        <script>
+            var num;
+            var inventory = [];
+            function w3schools_sort(a, b){
+                return a-b;
+            }
+            function getRndInteger(min, max) { // a proper random function from w3schools
+                return Math.floor(Math.random() * (max - min) ) + min;
+            }
+            function check_duplicate(i) {
+               if (i == num) {
+                   return true;
+                }
+            }
+            function one_roll() {
+                num = getRndInteger(1,11);
+                if (inventory.find(check_duplicate)) {
+                    // do nothing
+                    console.log("dulplicated!", num)
+                    document.getElementById('screen').innerHTML = "dulplicated! " + num;
+                }
+                else {
+                    document.getElementById('screen').innerHTML = num;
+                    inventory.push(num);
+                    inventory.sort(w3schools_sort);
+                    document.getElementById('inventory').innerHTML = inventory;
+                }
+                if (inventory.length >= 10) {
+                    document.getElementById('screen').innerHTML = "You win!";
+                    document.getElementById('screen').style = "color:chartreuse";
+                    document.getElementById('button').style.display = "none";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col text-center">
+                    <h2>Gacha game!</h2>
+                    <h4 id="screen">--</h4>
+                    <button id="button" type="button" onclick="one_roll()">roll!</button>
+                    <h4 id="inventory"></h4>
+                </div>
+            </div> 
+        </div>
+    </body>
+    <script>
+        // inventory.push("amatsun") // append to array
+    </script>
+</html>
