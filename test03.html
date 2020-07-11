@@ -1,0 +1,28 @@
+<!-- how to create element -->
+<head>
+  <title>test03</title>
+  <link rel="icon"; href="chocola_profile_small_transparent.png"; type="image/x-icon">
+</head>
+<div id="div1">
+  <p id="p1">This is a paragraph.</p>
+  <p id="p2">This is another paragraph.</p>
+  <p id="p3">This not show</p>
+  <p id="demo"></p>
+  <input type="number" onchange="createP()">
+</div>
+<script>
+  document.getElementById('p3').style.display = 'none';
+  function createP() {
+    var para = document.createElement("p");
+    var node = document.createTextNode("This is new.");
+    para.appendChild(node);
+
+    var element = document.getElementById("div1");
+    element.appendChild(para);
+  }
+  var text = 'It\'s all cool';
+  document.getElementById('p2').innerHTML += text;
+  var str = "Please locate where 'locate' occurs!";
+  var pos = str.indexOf("locate");
+  document.getElementById("demo").innerHTML = pos;
+</script> 
