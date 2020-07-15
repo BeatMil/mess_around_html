@@ -27,7 +27,11 @@ a:hover {
 html,
 body {
   height: 100%;
+<<<<<<< HEAD
   background-color: #333;
+=======
+  background-color: #1a001a;
+>>>>>>> 74caaa9897337e6d3b734f1f34dcdd939edf42d0
 }
 
 body {
@@ -104,3 +108,65 @@ body {
 .mastfoot {
   color: rgba(255, 255, 255, .5);
 }
+<<<<<<< HEAD
+=======
+
+/*
+ * Animation
+ */
+.blink {
+  animation: blinker 1.0s linear infinite;
+  /* color: #1c87c9; */
+  /* font-size: 30px;
+  font-weight: bold;
+  font-family: sans-serif; */
+}
+@keyframes blinker {
+  50% {
+  opacity: 0;
+  }
+}
+.blink-beat {
+  animation: glow_purple 1.0s linear infinite;
+  /* color: #1c87c9; */
+  /* font-size: 30px;
+  font-weight: bold;
+  font-family: sans-serif; */
+}
+@keyframes glow_purple {
+  /* from {color:#9c81af;}
+  to {color:#6d1fa5;} */
+  50% {
+    color:#8726cc;
+  }
+}
+
+.blink-one {
+  animation: blinker-one 1s linear infinite;
+}
+@keyframes blinker-one {
+  0% {
+    opacity: 0;
+  }
+}
+.blink-two {
+  animation: blinker-two 1.4s linear infinite;
+}
+@keyframes blinker-two {
+  100% {
+  opacity: 0;
+  }
+}
+.bg {
+  /* The image used */
+  background-image: url("https://mdbootstrap.com/img/Photos/Horizontal/Nature/full page/img(20).jpg");
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+>>>>>>> 74caaa9897337e6d3b734f1f34dcdd939edf42d0
