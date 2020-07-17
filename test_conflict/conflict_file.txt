@@ -3,8 +3,4 @@ Answer the following question.
 Who is the best girl?
 
 # ANSWER HERE
-<<<<<<< HEAD
-# HIBIKI
-=======
 # TOHKA
->>>>>>> c71f49ca6e5359934bb7fafd566013228a3367c0
