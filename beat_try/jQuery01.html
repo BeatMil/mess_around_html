@@ -1,0 +1,89 @@
+<html>
+    <head>
+        <title>
+            jQuery01
+        </title>
+        <meta charset="utf-8">
+        <!--jQuery Content network delivery-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    </head>
+    <body>
+        <div class="container text-center">
+            <h1>I will not be shown</h1>
+            <h2>But I will be shown</h2>
+            <p id='demo2'>click me</p> <!-- mouse icon will not change when hover to this text -->
+            <p id='enterMe'>...</p>
+            <img id='tsundere' src="chocola_profile_small_transparent.png">
+            <div class="row">
+                <div class="col">
+                    <button id="b_show">show</button>
+                    <button id="b_hide">hide</button>
+                    <button id="b_toggle">toggle</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <button id="b_fadeIn">fadeIn</button>
+                    <button id="b_fadeOut">fadeOut</button>
+                    <button id="b_fadeToggle">fadeToggle</button>
+                    <button id="b_fadeTo">fadeTo .50</button>
+                </div>
+            </div>
+
+        </div>
+    </body>
+    <script>
+        var count = 0;
+        // hide all h1 tag
+        $("h1").hide() 
+        // This does not work //console.log($("p#demo").textContent)
+
+        // click text console
+        $("p").click(function(){
+              // action goes here!!
+            console.log("clicked");
+        });
+
+        // hover on image then ALERT
+        $("img#tsundere").mouseenter(function(){
+            count++;
+            $("p#enterMe").html("You entered me! "+ count)
+        });
+
+        // show button
+        $("button#b_show").click(function(){
+            $("#tsundere").show()
+        });
+
+        // hide button
+        $("button#b_hide").click(function(){
+            $("#tsundere").hide()
+        });
+        
+        // toggle button
+        $("button#b_toggle").click(function(){
+            $("#tsundere").toggle()
+        });
+        
+        // fadeIn button
+        $("button#b_fadeIn").click(function(){
+            $("#tsundere").fadeIn(1000)
+        });
+
+        // fadeOut button
+        $("button#b_fadeOut").click(function(){
+            $("#tsundere").fadeOut('fast')
+        });
+
+        // fadeToggle button
+        $("button#b_fadeToggle").click(function(){
+            $("#tsundere").fadeToggle()
+        });
+
+        // fadeTo button
+        $("button#b_fadeTo").click(function(){
+            $("#tsundere").fadeTo("slow",0.5)
+        });
+    </script>
+</html>
