@@ -1,6 +1,14 @@
 body{
     background-color: #1a001a;
 }
+
+h1{
+    color:white;
+}
+
+p{
+    color:white;
+}
 div#bg-img2  {
     background-color: lightgreen;
     width: 150%;
