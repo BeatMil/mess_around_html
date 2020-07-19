@@ -1,0 +1,11 @@
+div#bg-img  {
+      background-image: url("maika_practice03.png");
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: 600px;
+}
+
+
+h1#go {
+    color:purple;
+}
