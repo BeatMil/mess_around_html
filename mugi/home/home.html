@@ -4,47 +4,22 @@
         <title>Mugi - home</title>
         <meta charset="utf-8">
         <link rel = "icon" href = "../../beat_try/chocola_profile_small_transparent.png" 
-            type = "image/x-icon">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" 
-            integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" 
-            crossorigin="anonymous">
+              type = "image/x-icon">
+        <link rel="stylesheet" 
+              href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" 
+              integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" 
+              crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="home.css">
+
+        <!--jQuery-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     </head>
 
     <!-- Navbar content -->
-    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #666666;">
-        <a class="navbar-brand" href="example5.html">
-            <img src="../../beat_try/chocola_profile_small_transparent.png" alt="mugi_chocola" style="width: 32px; height: 32px;">
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collaspe navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" id="nav-white"; href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="nav-white";href="#">Link</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Dropdown
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#">Disabled</a>
-                </li>
-            </ul>
-            <form class="form-inline my-2 my-lg-0">
-            </form>
-        </div>
+    <nav class="nav justify-content-center">
+        <a class="nav-link active" href="#">about</a>
+        <a class="nav-link active" href="#">contact</a>
+
     </nav>
 
     <body>
@@ -56,6 +31,8 @@
                 <div class="col text-center" id="main_col">
                     <h1 id="title">Mugi adventure</h1>
                     <h1 id="go">RPG anime platformer with fighting game element</h1>
+                    <h2 title="boss fight!">[some pic here]</h2>
+                    <h1>many boss fights with cool ending</h1>
                 </div>
                 <div class="col text-center" id="bg-img2">
                     <!--<img src="mugi_site.png"  class="img-fluid" >-->
@@ -63,4 +40,14 @@
             </div>
         </div>
     </body>
+    <script>
+        // mouse over fadeto 0.5 mouseout fadeto 1.0
+        $("h2").mouseenter(function(){
+            $("h2").fadeTo(64,0.5);
+        });
+
+        $("h2").mouseleave(function(){
+            $("h2").fadeTo(64,1);
+        });       
+    </script>
 </html>
