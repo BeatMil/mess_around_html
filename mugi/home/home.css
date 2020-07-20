@@ -4,6 +4,12 @@ body{
 
 h1{
     color:white;
+    font-family:"tobyfox_font", monospace;
+}
+@font-face {
+/*font actually makes it look so much better*/
+    font-family: tobyfox_font;
+    src: url(PixelOperator8.ttf);
 }
 
 p{
@@ -38,6 +44,9 @@ div#bg-img2  {
     /*border: 1px solid red;*/
 }
 
+h1#title {
+    margin: 35px;
+}
 
 
 p#blue {
@@ -45,5 +54,6 @@ p#blue {
 }
 
 h1#go {
-    color:purple;
+    font-size: 22px;
+    color: #cccccc;
 }
