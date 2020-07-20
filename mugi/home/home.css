@@ -6,10 +6,16 @@ h1{
     color:white;
     font-family:"tobyfox_font", monospace;
 }
+
 @font-face {
 /*font actually makes it look so much better*/
     font-family: tobyfox_font;
     src: url(PixelOperator8.ttf);
+}
+
+h2#hidden_boss_fight {
+    display: none;
+    /*padding: 50px;*/
 }
 
 p{
