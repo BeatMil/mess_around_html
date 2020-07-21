@@ -31,9 +31,11 @@
                 <div class="col text-center" id="main_col">
                     <h1 id="title">Mugi adventure</h1>
                     <h1 id="go">RPG anime platformer with fighting game element</h1>
-                    <h2 id="boss_fight">[some pic here]</h2>
+                    <img src="dew_adventure.png" id="boss_fight">
                     <h2 id="hidden_boss_fight">[hidden pic here]</h2>
-                    <h1>many boss fights with cool ending</h1>
+                    <h1>many boss fights with cool cinimatic</h1>
+                    <button id="button1">css button</button>
+                    <button class="btn">bootstrap button</button>
                 </div>
                 <div class="col text-center" id="bg-img2">
                     <!--<img src="mugi_site.png"  class="img-fluid" >-->
@@ -44,17 +46,23 @@
     <script>
         $(document).ready(function(){
             // mouse over fadeto 0.5 mouseout fadeto 1.0
-            $("h2#boss_fight").mouseenter(function () {
-                $("h2#boss_fight").fadeTo(64, 0.5);
+            $("img#boss_fight").mouseenter(function () {
+                $("img#boss_fight").fadeTo(64, 0.5);
+            });
+            $("img#boss_fight").mouseleave(function () {
+                $("img#boss_fight").fadeTo(64, 1);
             });
 
-            $("h2#boss_fight").mouseleave(function () {
-                $("h2#boss_fight").fadeTo(64, 1);
+            // toggle hidden image with click
+            $("img#boss_fight").click(function(){
+                $("h2#hidden_boss_fight").slideToggle("fast");
             });
 
-            $("h2#boss_fight").click(function(){
-                $("h2#hidden_boss_fight").slideDown("slow");
+            // toggle the not hidden image 
+            $("button#button1").click(function(){
+               $("img#boss_fight").slideToggle("fast"); 
             });
+
         });
     </script>
 </html>
