@@ -26,26 +26,31 @@ a {
     color:white;
     font-family:"tobyfox_font", monospace;
 }
+
 a#nav-white{
     color:white;
+}
+
+a#active {
+    color: #00e600;
 }
 
 div#bg-img  {
     /*background-color: lightblue;*/
     width: auto;
-    height: 938px;
+    height: auto;
     background-image: url('maika_practice03.png');
     background-position: left;
     background-repeat: no-repeat;
     background-size: contain;
     background-attachment: fixed;
-    /*border: 1px solid red;*/
+    border: 1px solid red;
 }
 
 div#bg-img2  {
     /*background-color: lightgreen;*/
     width: 100%;
-    height: 938px;
+    height: auto;
     background-image: url('maika_practice03_flipped.png');
     background-repeat: no-repeat;
     background-size: contain;
@@ -68,6 +73,12 @@ h1#go {
     color: #cccccc;
 }
 
+h1#chat {
+    font-size: 22px;
+    /*color: #cccccc;*/
+    color: white;
+    text-align: left;
+}
 nav {
     background-color: #666666;
 }
@@ -79,6 +90,19 @@ img {
     /*margin: 16px;*/
     padding: 16px;
     /*border: 1px solid red;*/
+}
+
+img#chat_profile {
+    width: 80%;
+    /* crop image circle */ 
+    /*object-fit: cover;*/
+    border-radius: 50%;
+}
+
+img#img_chat {
+    height: 300px;
+    width: auto;
+    opacity: 20%;
 }
 
 #button1 {
