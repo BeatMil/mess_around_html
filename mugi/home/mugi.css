@@ -87,18 +87,26 @@ img {
     /*overflow: hidden;*/
     display: block;
     width: 100%;
-    /*margin: 16px;*/
-    padding: 16px;
+    margin: 16px;
+    /*padding: 16px;*/
     /*border: 1px solid red;*/
 }
 
 img#chat_profile {
     width: 80%;
+    height: auto;
     /* crop image circle */ 
     /*object-fit: cover;*/
+    /*opacity:10%;*/
     border-radius: 50%;
 }
 
+img#chat_profile2 {
+    width: 80%;
+    /*height: auto;*/
+    margin-left: 12px;
+    border-radius: 50%;
+}
 img#img_chat {
     height: 300px;
     width: auto;
